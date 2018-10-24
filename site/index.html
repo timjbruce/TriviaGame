@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Connected Car Trivia Day!</title>
+
+  <link rel="stylesheet" href="./css/bulma.css">
+  <style>
+  html {
+          background: url('./assets/honeysuckle-2-cover.png') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+      }
+  </style>
+</head>
+
+<body>
+
+  <div id="divQuestion" class="container level-item has-centered-text">
+    <div id="question"><h1 class="title is-2" id="questiontext"></h1></div></div>
+  <div id="divAnswers" class="container">
+    <form id="response" width="600px">
+        <input type="text" id="qid" hidden="true"><input type="text" id="answer" value="" hidden="true"><br>
+        <a href="#" type="Button" class="button is-warning is-large is-fullwidth" id="divA" onclick="selectAnswer('A')">placeholder</a><br>
+        <a href="#" type="Button" class="button is-primary is-large is-fullwidth"  id="divB" onclick="selectAnswer('B')">placeholder</a><br>
+        <a href="#" type="Button" class="button is-danger is-large is-fullwidth" id="divC" onclick="selectAnswer('C')">placeholder</a><br>
+        <a href="#" type="Button" class="button is-info is-large is-fullwidth" id="divD" onclick="selectAnswer('D')">placeholder</a><br>
+        <a href="#" type="Button" class="button is-success is-large is-fullwidth" id="checkAnswerBtn" onclick="checkAnswer();">Check My Answer!</a><br>
+    </form>
+  </div>
+  <div id="divResponse" class="container notification is-link has-centered-text">
+    <h3 class="title is-3" id="hrightwrong">testing</h3>
+    <h4 class="title is-4" id="hflavortext">again</h4>
+    <a href="#" type="Button" class="button is-warning is-large is-fullwidth" id="nextQuestionBtn" name="nextQuestion" onclick="retrieveQuestion();">Next Question!</a>
+  </div>
+  <div id="logos" class=container>
+    <img src="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png" class="image is-square">
+    <img src="http://ccdtw-landing-page.s3-website-us-east-1.amazonaws.com/images/cog-logo.svg" class="image is-square">
+    <img src="http://ccdtw-landing-page.s3-website-us-east-1.amazonaws.com/images/wipro-logo.png" class="image is-square">
+  </div>
+
+  <script src="./js/scripts.js"></script>
+</body>
+
+</html>

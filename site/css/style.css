@@ -1,0 +1,151 @@
+html {
+        background: url('honeysuckle-2-cover.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+#divQuestion {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #FFF5E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#divAnswers {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #CDE6E0;
+  border: 1px solid black;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+#divResponse {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #FFF5E8;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  flex-wrap: wrap;
+  display: flex;
+  height: 120px;
+  vertical-align: middle;
+}
+#divResponse2 {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #FFF5E8;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  flex-wrap: wrap;
+  display: flex;
+  height: 60px;
+  vertical-align: middle;
+}
+#divResponse3 {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #FFF5E8;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  flex-wrap: wrap;
+  display: flex;
+  height: 120px;
+  vertical-align: middle;
+}
+
+#divA {
+    background-color: #B12704;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px;
+    font-size: 16pt;
+    justify-content: center;
+}
+
+#divB {
+    background-color: #0066C0;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px;
+    font-size: 16pt;
+}
+
+#divC {
+    background-color: #767676;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px;
+    font-size: 16pt;
+}
+
+#divD {
+    background-color: #C45500;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px;
+    font-size: 16pt;
+}
+
+#checkAnswerBtn {
+    background-color: #008A00;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px;
+    font-size: 16pt;
+}
+
+#nextQuestionBtn {
+  background-color: #008A00;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  flex-wrap: wrap;
+  height: 40px;
+  font-size: 16pt;
+}
+
+#hrightwrong {
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 32pt;
+  font: bold;
+}
+
+#hflavortext {
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 18pt;
+}
+
+.container {
+
+}
