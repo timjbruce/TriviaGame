@@ -9,6 +9,8 @@ const app = document.getElementById('root');
 
 //app.appendChild(logo);
 //app.appendChild(container);
+const baseuri = 'https://sw5grt00ta.execute-api.us-east-1.amazonaws.com/test/index';
+//const baseuri = 'https://gkevx3fe8f.execute-api.us-east-1.amazonaws.com/prod/index';
 
 function selectAnswer(value) {
   var form = document.getElementById('response');
@@ -27,24 +29,18 @@ function enableState(mode) {
   var nextQuestion = document.getElementById('nextQuestionBtn');
   var checkAnswer = document.getElementById('checkAnswerBtn');
   var response = document.getElementById('divResponse');
-  var response2 = document.getElementById('divResponse2');
-  var response3 = document.getElementById('divResponse3');
   if(mode=="answer"){
     nextQuestion.enabled = false;
     nextQuestion.style.visibility = 'hidden';
     checkAnswer.enabled = true;
     checkAnswer.style.visibility = 'visible';
     response.style.visibility = 'hidden';
-    response2.style.visibility = 'hidden';
-    response3.style.visibility = 'hidden';
   } else {
     nextQuestion.enabled = true;
     nextQuestion.style.visibility = 'visible';
     checkAnswer.enabled = false;
     checkAnswer.style.visibility = 'hidden';
     response.style.visibility = 'visible';
-    response2.style.visibility = 'visible';
-    response3.style.visibility = 'visible';
   }
 
 
@@ -58,7 +54,7 @@ function checkAnswer() {
     alert('Please select an answer!');
     return;
   }
-  var uri = 'https://sw5grt00ta.execute-api.us-east-1.amazonaws.com/test/index?qid='+qid+'&answer='+answer;
+  var uri = baseuri + '?qid='+qid+'&answer='+answer;
   fetch(uri, {method: 'post'})
       .then(response => {
         if(response.ok) return response.json();
@@ -76,7 +72,7 @@ function checkAnswer() {
 }
 
 function retrieveQuestion() {
-  fetch('https://sw5grt00ta.execute-api.us-east-1.amazonaws.com/test/index')
+  fetch(baseuri, {method:"GET"})
       .then(response => {
         if(response.ok) return response.json();
             throw new Error(response.statusText)  // throw an error if there's something wrong with the response

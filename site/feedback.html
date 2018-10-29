@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Connected Car Day Feedback</title>
+
+  <link rel="stylesheet" href="./css/bulma.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+  <style>
+  html {
+          background: url('./assets/honeysuckle-2-cover.png') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+      }
+
+  </style>
+
+  <script>
+
+    function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+  </script>
+  <script src="./fbscripts.js"></script>
+</head>
+
+<body>
+  <a name="top"></a>
+  <div id="header" class="box">
+    <div class="columns is-vcentered">
+      <div class="column is-2" id="awslogo">
+          <figure class="image container is-128x128"><img src="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png"></figure>
+      </div>
+
+      <div class="column is-3" id="title">
+        <section class="hero">
+          <div class="container">
+            <h4 class="title is-1">
+              AWS CC Feedback
+            </h4>
+          </div>
+        </section>
+      </div>
+      <div class="column is-2" id="coglogo">
+        <figure class="image" width="128px"><img src="http://ccdtw-landing-page.s3-website-us-east-1.amazonaws.com/images/cog-logo.svg"></figure>
+      </div>
+      <div class="column is-2" id="wiplogo">
+        <figure class="image container is-128x128"><img src="http://ccdtw-landing-page.s3-website-us-east-1.amazonaws.com/images/wipro-logo.png"></figure>
+      </div>
+      <div class="column is-1" id="spacer">
+      </div>
+      <div class="column is-1" id="trivia">
+        <a class="button" href="index.html">Trivia&nbsp&nbsp
+              <i class="fas fa-chalkboard"></i>
+        </a>
+    </div>
+  </div>
+  </div>
+  <a name="anchor_question" id="anchor_question">&nbsp</a>
+  <div id="header" class="container level-item has-centered-text">
+    <div id="header"><h1 class="title is-4" id="header text">Share your thoughts with us</h1></div></div>
+<form id="response">
+<div class="container has-centered-text">
+<div class="field">
+  <label class="label">Name (optional)</label>
+  <div class="control has-icons-left">
+    <input autocomplete="off" id="name" class="input" type="text" placeholder="e.g Alex Smith">
+    <span class="icon is-small is-left">
+      <i class="fas fa-user"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Email (optional)</label>
+  <div class="control has-icons-left">
+    <input autocomplete="off" id="email" class="input" type="email" placeholder="e.g. alexsmith@amazon.com">
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">General Feedback</label>
+  <div class="control">
+    <textarea autocomplete="off" id="feedback" class="textarea" placeholder="Your feedback"></textarea>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">How can we improve future Connected Car Events?</label>
+  <div class="control">
+    <textarea autocomplete="off" id="improve" class="textarea" placeholder="Improvement Ideas"></textarea>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">What would you like us to follow up with you about?</label>
+  <div class="control">
+    <textarea autocomplete="off" id="followup" class="textarea" placeholder="Items to follow up on"></textarea>
+  </div>
+</div>
+
+<table class="table">
+  <thead><tr><label class="label">Please rate the following items (1 = needs improvement, 5 = excellent)</label></tr></thead>
+  <tbody>
+    <tr><td><label class="label">Driver Safety Meeting</label></td>
+      <td>
+        <div class="field">
+          <div class="select">
+            <select autocomplete="off" id="driversafety">
+              <option selected="selected" value="N/A">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr><td><label class="label">Track Sessions</label></td>
+      <td>
+        <div class="field">
+          <div class="select">
+            <select autocomplete="off" id="tracksessions">
+              <option selected="selected" value="N/A">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr><td><label class="label">Tech Sessions</label></td>
+      <td>
+        <div class="field">
+          <div class="select">
+            <select autocomplete="off" id="techsessions">
+              <option selected="selected" value="N/A">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr><td><label class="label">Expo Area</label></td>
+      <td>
+        <div class="field">
+          <div class="select">
+            <select autocomplete="off" id="expoarea">
+              <option selected="selected" value="N/A">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr><td><label class="label">Wipro Presentation</label></td>
+      <td>
+        <div class="field">
+          <div class="select">
+            <select autocomplete="off" id="wipro">
+              <option selected="selected" value="N/A">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      </td>
+    </tr>
+    <tr><td><label class="label">Cognizant Presentation</label></td>
+      <td>
+        <div class="field">
+          <div class="select">
+            <select autocomplete="off" id="cognizant">
+              <option selected="selected" value="N/A">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<div class="container">
+<a id="submitbutton" class="button is-primary" onclick='submitform()'>Submit</a>
+<a id="triviabutton" class="button is-primary" href="index.html">Back to Trivia</a>
+</form>
+</div>
+
+
+
+</body>
+</html>

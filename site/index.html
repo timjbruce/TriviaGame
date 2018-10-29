@@ -5,9 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Connected Car Trivia Day!</title>
+  <title>AWS Connected Car Day Trivia</title>
 
   <link rel="stylesheet" href="./css/bulma.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
   <style>
   html {
           background: url('./assets/honeysuckle-2-cover.png') no-repeat center center fixed;
@@ -16,35 +18,65 @@
           -o-background-size: cover;
           background-size: cover;
       }
+  .has-image-centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
   </style>
 </head>
 
 <body>
+  <a name="top"></a>
+  <div id="header" class="box">
+    <div class="columns is-vcentered">
+      <div class="column is-2" id="awslogo">
+          <figure class="image container is-128x128"><img src="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png"></figure>
+      </div>
 
+      <div class="column is-3" id="title">
+        <section class="hero">
+          <div class="container">
+            <h4 class="title is-1">
+              AWS Trivia
+            </h4>
+          </div>
+        </section>
+      </div>
+      <div class="column is-2" id="coglogo">
+        <figure class="image" width="128px"><img src="http://ccdtw-landing-page.s3-website-us-east-1.amazonaws.com/images/cog-logo.svg"></figure>
+      </div>
+      <div class="column is-2" id="wiplogo">
+        <figure class="image container is-128x128"><img src="http://ccdtw-landing-page.s3-website-us-east-1.amazonaws.com/images/wipro-logo.png"></figure>
+      </div>
+      <div class="column is-1" id="spacer">
+      </div>
+      <div class="column is-1" id="feedback">
+        <a class="button" href="feedback.html">Feedback&nbsp&nbsp
+              <i class="fas fa-comments"></i>
+        </a>
+    </div>
+  </div>
+  <a name="anchor_question" id="anchor_question">&nbsp</a>
+  </div>
   <div id="divQuestion" class="container level-item has-centered-text">
-    <div id="question"><h1 class="title is-2" id="questiontext"></h1></div></div>
+    <div id="question"><h1 class="title is-4" id="questiontext"></h1></div></div>
   <div id="divAnswers" class="container">
     <form id="response" width="600px">
         <input type="text" id="qid" hidden="true"><input type="text" id="answer" value="" hidden="true"><br>
-        <a href="#" type="Button" class="button is-warning is-large is-fullwidth" id="divA" onclick="selectAnswer('A')">placeholder</a><br>
-        <a href="#" type="Button" class="button is-primary is-large is-fullwidth"  id="divB" onclick="selectAnswer('B')">placeholder</a><br>
-        <a href="#" type="Button" class="button is-danger is-large is-fullwidth" id="divC" onclick="selectAnswer('C')">placeholder</a><br>
-        <a href="#" type="Button" class="button is-info is-large is-fullwidth" id="divD" onclick="selectAnswer('D')">placeholder</a><br>
-        <a href="#" type="Button" class="button is-success is-large is-fullwidth" id="checkAnswerBtn" onclick="checkAnswer();">Check My Answer!</a><br>
+        <a href="#anchor_answerbutton" type="Button" class="button is-warning is-large is-fullwidth" id="divA" onclick="selectAnswer('A')">placeholder</a><br>
+        <a href="#anchor_answerbutton" type="Button" class="button is-primary is-large is-fullwidth"  id="divB" onclick="selectAnswer('B')">placeholder</a><br>
+        <a href="#anchor_answerbutton" type="Button" class="button is-danger is-large is-fullwidth" id="divC" onclick="selectAnswer('C')">placeholder</a><br>
+        <a href="#anchor_answerbutton" type="Button" class="button is-info is-large is-fullwidth" id="divD" onclick="selectAnswer('D')">placeholder</a><br>
+        <a name="anchor_answerbutton" href="#anchor_response" type="Button" class="button is-success is-large is-fullwidth" id="checkAnswerBtn" onclick="checkAnswer();">Check My Answer!</a><br>
     </form>
   </div>
+  <a name="anchor_respone" id="anchor_response">&nbsp</a>
   <div id="divResponse" class="container notification is-link has-centered-text">
-    <h3 class="title is-3" id="hrightwrong">testing</h3>
-    <h4 class="title is-4" id="hflavortext">again</h4>
-    <a href="#" type="Button" class="button is-warning is-large is-fullwidth" id="nextQuestionBtn" name="nextQuestion" onclick="retrieveQuestion();">Next Question!</a>
+    <h3 class="title is-4" id="hrightwrong">testing</h3>
+    <h4 class="title is-5" id="hflavortext">again</h4>
+    <a href="#anchor_question" type="Button" class="button is-warning is-large is-fullwidth" id="nextQuestionBtn" name="nextQuestion" onclick="retrieveQuestion();">Random Question!</a>
   </div>
-  <div id="logos" class=container>
-    <img src="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png" class="image is-square">
-    <img src="http://ccdtw-landing-page.s3-website-us-east-1.amazonaws.com/images/cog-logo.svg" class="image is-square">
-    <img src="http://ccdtw-landing-page.s3-website-us-east-1.amazonaws.com/images/wipro-logo.png" class="image is-square">
-  </div>
-
-  <script src="./js/scripts.js"></script>
+  <script src="./scripts.js"></script>
 </body>
 
 </html>
